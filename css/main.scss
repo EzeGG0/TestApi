@@ -1,0 +1,17 @@
+@import "vars";
+body {
+  background-color: $blackColor;
+}
+
+.navBar {
+  background-color: $NavColor;
+  .navBar__container {
+    .navBar__container__ul {
+      .navBar__container__ul__li {
+        .navBar__link {
+          font-family: $navFont;
+        }
+      }
+    }
+  }
+}
