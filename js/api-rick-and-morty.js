@@ -3,7 +3,7 @@ $(document).ready(() => {
 
   const baseUrl = 'https://rickandmortyapi.com/api';
   const container = document.querySelector('#container');
-  const cantidadPersonajes = 2;
+  const cantidadPersonajes = 42;
 
   // Seleccionar el personaje
 
@@ -24,9 +24,9 @@ $(document).ready(() => {
     <p class="${status}">Estatus: ${status}</p>
     <p class="characterId">Id: ${id}</p>
     <p class="specie">Specie: ${species}</p>
-    <p class="gender">Geneder: ${gender}</p>
-    <p class="origin">Origin: ${origin.name}</p>
-    <p class="location">Location: ${location.name}</p>
+    <p class="gender">Gender: ${gender}</p>
+    <p class="origin">Origin: <br/>${origin.name}</p>
+    <p class="location">Location: <br>${location.name}</p>
   </div>
   `;
     // Se agrega al DOM

@@ -105,3 +105,36 @@ div.wrapper {
     }
   }
 }
+
+.rick-and-morty {
+  @include defaultRowCenter;
+  justify-content: flex-start;
+  width: 100%;
+  margin-left: 2rem;
+  .charactersCard {
+    background-color: $secondaryColor;
+    color: $whiteText;
+    margin: 1rem;
+    padding: 1rem;
+    border: solid $textColorHover 0.2rem;
+    border-radius: 1.3rem;
+    .characterImg {
+      width: 17rem;
+    }
+    .characterName {
+      text-align: center;
+      text-decoration: none;
+      font-family: $navFont;
+      font-weight: 800;
+      margin-top: 0.4rem;
+      margin-bottom: 0.7rem;
+      font-size: 1rem;
+    }
+    .Alive {
+      background-color: rgba(100, 163, 6, 0.631);
+    }
+    .Dead {
+      background-color: rgba(234, 67, 67, 0.297);
+    }
+  }
+}
