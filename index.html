@@ -31,23 +31,51 @@
     </header>
     <div class="wrapper" id="wrapper">
       <div class="wrapper__formContainer">
-        <button class="addCharacterId" id="formEvent">
-          Add Character by Id
-        </button>
-        <form action="" class="wrapper__formContainer__addCharacter">
-          <input
-            type="number"
-            name=""
-            id="characterName"
-            class="characterIdInput"
-          />
-          <input
-            type="submit"
-            value="Submit"
-            id="submitCharacter"
-            class="characterIdSubmit"
-          />
-        </form>
+        <div class="wrapper__formId">
+          <button class="addCharacterId" id="formEvent">
+            Add Character by Id
+          </button>
+          <div class="formInside__wrapper">
+          <form action="" class="wrapper__formContainer__addCharacter">
+            
+              <input
+                type="number"
+                name=""
+                id="characterName"
+                class="characterIdInput number"
+                placeholder="Select the Id"
+              />
+              <input
+                type="submit"
+                value="Submit"
+                id="submitCharacter"
+                class="characterIdSubmit"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="wrapper__formQuantity">
+          <button class="addQuantity" id="charQuantity">
+            Select a quantity of characters
+          </button>
+          <div class="formInside__wrapper">
+          <form action="" class="wrapper__formContainer__addQuantity">
+              <input
+                type="number"
+                name=""
+                id="characterQuantity"
+                class="characterQuantityInput number"
+                placeholder="Select the quantity"
+              />
+              <input
+                type="submit"
+                value="Submit"
+                id="submitQuantity"
+                class="characterQuantity"
+              />
+            </div>
+          </form>
+        </div>
       </div>
       <div class="rick-and-morty" id="container"></div>
       <span id="element"></span>

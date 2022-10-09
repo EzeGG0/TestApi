@@ -43,8 +43,60 @@ body {
 
 div.wrapper {
   div.wrapper__formContainer {
-    button.addCharacterId {
+    button.addCharacterId,
+    button.addQuantity {
       @include buttons;
+      width: 100%;
+    }
+  }
+  div.wrapper__formContainer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all ease 0.4s;
+    .wrapper__formId,
+    .wrapper__formQuantity {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 40%;
+      height: 120%;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4rem;
+      .formInside__wrapper {
+        @include defaultRowCenter;
+        width: 100%;
+        background-color: $principalColor;
+        justify-content: center;
+        align-items: flex-start;
+        height: 20rem;
+        .wrapper__formContainer__addCharacter,
+        .wrapper__formContainer__addQuantity {
+          @include defaultRowCenter;
+          flex-direction: column;
+          margin-top: 3rem;
+          width: 100%;
+          height: auto;
+          input {
+            margin-top: 2rem;
+          }
+        }
+        .wrapper__formContainer__addQuantity {
+          .characterQuantity {
+            @include buttons;
+            padding: 1rem;
+            border-radius: 0.6rem;
+          }
+        }
+        .wrapper__formContainer__addCharacter {
+          .characterIdSubmit {
+            @include buttons;
+            padding: 1rem;
+            border-radius: 0.6rem;
+          }
+        }
+      }
     }
   }
 }
