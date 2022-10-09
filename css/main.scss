@@ -4,7 +4,12 @@ body {
   background-color: $blackColor;
   color: white;
 }
-
+.hidden {
+  display: none;
+}
+.showingForm {
+  display: flex;
+}
 .navBar {
   display: flex;
   flex-flow: row wrap;
