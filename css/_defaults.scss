@@ -1,10 +1,16 @@
 @import "vars";
 @mixin buttons {
-  color: $secondaryColor;
+  background-color: $secondaryColor;
+  color: $whiteText;
   padding: 2rem;
   transition: all ease 0.3s;
-  :hover {
-    transform: scale(1.1);
-    color: $secondatyHover;
+  border: none;
+  &:active {
+    transform: scale(0.96);
+    background-color: $secondaryHover;
+    border: none;
+  }
+  &:hover {
+    box-shadow: $shadowBtn;
   }
 }

@@ -10,7 +10,8 @@
     <script src="js/navBar.js"></script>
     <script src="js/api-rick-and-morty.js"></script>
     <title>Api & Libraries</title>
-    <link rel="stylesheet" href="css/css/" />
+    <link rel="stylesheet" href="css/css/main.css" />
+    <link rel="stylesheet" href="css/css/reset.css" />
   </head>
   <body>
     <header class="navBar">
@@ -28,11 +29,28 @@
         </ul>
       </nav>
     </header>
-    <form action="" class="addCharacter">
-      <input type="number" name="" id="characterName" />
-      <input type="submit" value="Sumit" id="submitCharacter" />
-    </form>
-    <div class="rick-and-morty" id="container"></div>
-    <span id="element"></span>
+    <div class="wrapper" id="wrapper">
+      <div class="wrapper__formContainer">
+        <button class="addCharacterId" id="formEvent">
+          Add Character by Id
+        </button>
+        <form action="" class="wrapper__formContainer__addCharacter">
+          <input
+            type="number"
+            name=""
+            id="characterName"
+            class="characterIdInput"
+          />
+          <input
+            type="submit"
+            value="Submit"
+            id="submitCharacter"
+            class="characterIdSubmit"
+          />
+        </form>
+      </div>
+      <div class="rick-and-morty" id="container"></div>
+      <span id="element"></span>
+    </div>
   </body>
 </html>

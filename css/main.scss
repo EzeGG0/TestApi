@@ -1,17 +1,50 @@
 @import "vars";
+@import "defaults";
 body {
   background-color: $blackColor;
+  color: white;
 }
 
 .navBar {
+  display: flex;
+  flex-flow: row wrap;
   background-color: $NavColor;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  margin-bottom: 3rem;
   .navBar__container {
+    display: flex;
+    flex-flow: row nowrap;
     .navBar__container__ul {
+      display: flex;
+      flex-flow: row nowrap;
       .navBar__container__ul__li {
+        list-style: none;
         .navBar__link {
           font-family: $navFont;
+          margin: 1rem 3rem;
+          text-decoration: none;
+          font-family: $navFont;
+          color: $textColor;
+          font-size: 1.2rem;
+          transition: all ease 0.3s;
+          &:visited {
+            color: $textColor;
+          }
+          &:hover {
+            color: $textColorHover;
+          }
         }
       }
+    }
+  }
+}
+
+div.wrapper {
+  div.wrapper__formContainer {
+    button.addCharacterId {
+      @include buttons;
     }
   }
 }

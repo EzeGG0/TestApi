@@ -9,7 +9,7 @@ $(document).ready(() => {
   });
 
   const charIds = new TypeIt('#charId', {
-    strings: ['Rick And Morty Id'],
+    strings: ['Rick And Morty Ids'],
   });
 
   const pokeApi = new TypeIt('#poke', {
