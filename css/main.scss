@@ -142,7 +142,7 @@ div.wrapper {
   @media screen and (max-width: 790px) {
     display: flex;
     flex-flow: column nowrap;
-    margin: 5rem;
+    margin: 1rem;
     div.wrapper__formContainer {
       flex-flow: column nowrap;
       width: 100%;
@@ -216,21 +216,26 @@ div.wrapper {
       width: auto;
       height: fit-content;
       align-items: center;
-      justify-content: center;
-      .characterName {
+      justify-content: flex-start;
+      #charName {
         text-align: center;
+        align-self: center;
+        margin: auto auto;
       }
       .charactersCards__info {
         margin: 0;
         width: fit-content;
       }
       .characterImg {
-        width: 100%;
+        width: 70%;
         height: auto;
         border-radius: 0%;
       }
       .textCard {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        text-align: start;
+        letter-spacing: 3px;
+        font-family: Arial, Helvetica, sans-serif;
       }
     }
   }
