@@ -21,3 +21,13 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin navBarHidden {
+  position: absolute;
+  left: -200px;
+}
+@mixin navBarShowing {
+}
+@mixin transition {
+  transition: all ease 0.3s;
+}
