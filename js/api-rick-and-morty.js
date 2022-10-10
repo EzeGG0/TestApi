@@ -23,13 +23,13 @@ $(document).ready(() => {
   <div class="charactersCard">
   <img src="${image}" alt="${name} Image" class="characterImg"/>
     <div class="charactersCards__info">
-      <h2 class="characterName" id="charName">${name}</h2>
-      <p class="${status} margin">Estatus: ${status}</p>
-      <p class="characterId margin">Id: ${id}</p>
-      <p class="specie margin">Specie: ${species}</p>
-      <p class="gender margin">Gender: ${gender}</p>
-      <p class="origin margin">Origin: <br/>${origin.name}</p>
-      <p class="location margin">Location: <br>${location.name}</p>
+      <h2 class="characterName textCard" id="charName">${name}</h2>
+      <p class="${status} margin textCard">Estatus: ${status}</p>
+      <p class="characterId margin textCard">Id: ${id}</p>
+      <p class="specie margin textCard">Specie: ${species}</p>
+      <p class="gender margin textCard">Gender: ${gender}</p>
+      <p class="origin margin textCard">Origin: <br/>${origin.name}</p>
+      <p class="location margin textCard">Location: <br>${location.name}</p>
     </div>
   </div>
   `;

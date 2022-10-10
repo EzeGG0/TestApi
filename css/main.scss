@@ -217,9 +217,19 @@ div.wrapper {
       height: fit-content;
       align-items: center;
       justify-content: center;
+      .characterName {
+        text-align: center;
+      }
+      .charactersCards__info {
+        margin: 0;
+      }
       .characterImg {
         width: 100%;
         height: auto;
+        border-radius: 0%;
+      }
+      .textCard {
+        font-size: 1.3rem;
       }
     }
   }
