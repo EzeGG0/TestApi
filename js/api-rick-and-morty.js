@@ -17,17 +17,20 @@ $(document).ready(() => {
     } = character;
     // Se crea un contenedor de las cards
     const createDiv = document.createElement('div');
+    createDiv.setAttribute('class', 'containerCards');
     // Se hace que se muestre toda la informacion de la api en el html
     const innerText = `
   <div class="charactersCard">
-    <img src="${image}" alt="${name} Image" class="characterImg"/>
-    <h2 class="characterName" id="charName">${name}</h2>
-    <p class="${status}">Estatus: ${status}</p>
-    <p class="characterId">Id: ${id}</p>
-    <p class="specie">Specie: ${species}</p>
-    <p class="gender">Gender: ${gender}</p>
-    <p class="origin">Origin: <br/>${origin.name}</p>
-    <p class="location">Location: <br>${location.name}</p>
+  <img src="${image}" alt="${name} Image" class="characterImg"/>
+    <div class="charactersCards__info">
+      <h2 class="characterName" id="charName">${name}</h2>
+      <p class="${status} margin">Estatus: ${status}</p>
+      <p class="characterId margin">Id: ${id}</p>
+      <p class="specie margin">Specie: ${species}</p>
+      <p class="gender margin">Gender: ${gender}</p>
+      <p class="origin margin">Origin: <br/>${origin.name}</p>
+      <p class="location margin">Location: <br>${location.name}</p>
+    </div>
   </div>
   `;
     // Se agrega al DOM
