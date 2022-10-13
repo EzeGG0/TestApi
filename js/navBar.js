@@ -7,6 +7,7 @@ $(document).ready(() => {
     $('#navBarId').toggleClass('mobileNavBar');
     $('#hambNavMenu').toggleClass('hambMenuShowing');
     $('#navBarId').addClass('navBarHidden');
+    $('.navBar__link').removeClass('navBar__link--hover');
   });
   // Functin to get the Width of the window
   function widthGeter() {
@@ -35,6 +36,10 @@ $(document).ready(() => {
     sizeLoadFunc(sizeLoad);
   });
   sizeLoadFunc(sizeLoad);
-  // aaa
-//   const size = $(window).width();
+
+  // Hover in the mobileNavBar
+  $('.navBar__link').click((e) => {
+    e.preventDefault();
+    $(e.currentTarget).toggleClass('navBar__link--hover');
+  });
 });

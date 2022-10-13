@@ -48,6 +48,13 @@ body {
         .navBar__link {
           color: white;
           text-decoration: none;
+          font-size: 1.3rem;
+        }
+        .navBar__link--hover {
+          color: rgb(159, 158, 158);
+          border-left: 3px solid aquamarine;
+          padding-left: 2rem;
+          transform: scale(1.1);
         }
       }
     }
