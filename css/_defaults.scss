@@ -24,7 +24,17 @@
 
 @mixin navBarHidden {
   position: absolute;
-  left: -200px;
+  left: -300px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  width: 15rem;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  background: rgba(96, 24, 251, 0.441);
 }
 @mixin navBarShowing {
 }

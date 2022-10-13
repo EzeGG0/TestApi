@@ -5,11 +5,18 @@ body {
   color: white;
 }
 .hambMenu {
-  position: sticky;
+  position: fixed;
+  top: 5px;
   left: 30px;
+  font-size: 1.5rem;
+  z-index: 2;
+  transition: all ease 0.3s;
 }
 .hambMenuShowing {
-  left: 17rem;
+  left: 16rem;
+}
+.hambMenuShowing::before {
+  content: "\f00d";
 }
 .transition {
   @include transition;
@@ -24,12 +31,27 @@ body {
   display: flex;
 }
 .mobileNavBar {
-  position: fixed;
-  width: 15rem;
-  height: 100%;
   top: 0;
   left: 0;
-  background: red;
+  .navBar__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    .navBar__container__ul {
+      height: 100%;
+      border-top: 1px solid $blackColor;
+      .navBar__container__ul__li {
+        margin-top: 3rem;
+
+        .navBar__link {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 .navBar {
   display: flex;
