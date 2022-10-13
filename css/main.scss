@@ -26,6 +26,31 @@ body {
 }
 .navBarHidden {
   @include navBarHidden;
+  .navBar__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    .navBar__container__ul {
+      height: 100%;
+      .navBar__container__ul__li {
+        margin-top: 3rem;
+
+        .navBar__link {
+          color: white;
+          text-decoration: none;
+          font-size: 1.3rem;
+        }
+        .navBar__link--hover {
+          color: rgb(159, 158, 158);
+          border-left: 3px solid aquamarine;
+          padding-left: 2rem;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
 }
 .showingForm {
   display: flex;
