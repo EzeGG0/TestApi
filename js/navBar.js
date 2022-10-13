@@ -1,36 +1,40 @@
 //! Not started
 $(document).ready(() => {
   // Get width
-  const sizeLoad = $(window).width();
-  if (sizeLoad <= 790) {
-    $('#navBarId').removeClass('navBar');
+  // Event Lister to display the nav
+  $('#hambNavMenu').click((e) => {
+    console.log(e);
+    $('#navBarId').toggleClass('mobileNavBar');
+    $('#hambNavMenu').toggleClass('hambMenuShowing');
     $('#navBarId').addClass('navBarHidden');
-    $('#hambNavMenu').removeClass('hidden');
-    //   $('#navBarId').addClass('mobileNavBar');
-    $('#hambNavMenu').click((e) => {
-      console.log(e);
-      $('#navBarId').toggleClass('mobileNavBar');
-      $('#hambNavMenu').toggleClass('hambMenuShowing');
-    });
+  });
+  // Functin to get the Width of the window
+  function widthGeter() {
+    return $(window).width();
   }
-  $(window).resize(() => {
-    const size = $(window).width();
-    if (size <= 790) {
+  // Get the width in the load
+  let sizeLoad = widthGeter();
+  // Function for the resize
+  function sizeLoadFunc() {
+    if (sizeLoad <= 790) {
       $('#navBarId').removeClass('navBar');
       $('#navBarId').addClass('navBarHidden');
       $('#hambNavMenu').removeClass('hidden');
-      //   $('#navBarId').addClass('mobileNavBar');
-      $('#hambNavMenu').click((e) => {
-        console.log(e);
-        $('#navBarId').toggleClass('mobileNavBar');
-        $('#hambNavMenu').toggleClass('hambMenuShowing');
-      });
-    } else if (!$('#navBarId').hasClass('navBar')) {
+    } else if (sizeLoad > 790) {
       $('#navBarId').addClass('navBar');
-      $('#navBarId').removeClass('navBarHidden');
       $('#hambNavMenu').addClass('hidden');
-      $('#hambNavMenu').addClass('transition');
+      $('#navBarId').removeClass('navBarHidden');
       $('#navBarId').removeClass('mobileNavBar');
+      $('#hambNavMenu').removeClass('hambMenuShowing');
     }
+    console.log('resize');
+  }
+  // Event listener in the resize
+  $(window).resize(() => {
+    sizeLoad = widthGeter();
+    sizeLoadFunc(sizeLoad);
   });
+  sizeLoadFunc(sizeLoad);
+  // aaa
+//   const size = $(window).width();
 });
