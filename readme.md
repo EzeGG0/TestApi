@@ -1,1 +1,1 @@
-# First try with some libraries and api
+# Test with Rick and Morty Api
